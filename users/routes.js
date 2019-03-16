@@ -4,6 +4,10 @@ const bcrypt = require('bcrypt')
 
 const usersRouter = new Router()
 
+usersRouter.get('/', ()=>{
+  console.log("Welcome to my api")
+})
+
 usersRouter.post('/users', (req, res, next) => {
   const user = {
     email: req.body.email,
